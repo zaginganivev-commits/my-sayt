@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodir Rimbayev — Frontend Dasturchi</title>
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+    <!-- Background Grid & Glowing Orbs -->
+    <div class="bg-grid"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <!-- Navigation Header -->
+    <header class="header" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-prefix">~/</span><span class="logo-name">nodir</span><span class="logo-cursor">_</span>
+            </a>
+
+            <!-- Desktop Nav Menu exactly matching the reference image -->
+            <nav class="nav-links">
+                <a href="#about" class="nav-link" data-i18n="nav_about">Haqimda</a>
+                <a href="#experience" class="nav-link" data-i18n="nav_exp">Tajriba</a>
+                <a href="#aidevix" class="nav-link" data-i18n="nav_aidevix">Aidevix</a>
+                <a href="#achievements" class="nav-link" data-i18n="nav_achievements">Yutuqlar</a>
+                <a href="#skills" class="nav-link" data-i18n="nav_skills">Ko'nikmalar</a>
+                <a href="#projects" class="nav-link" data-i18n="nav_projects">Loyihalar</a>
+                <a href="#contact" class="nav-link" data-i18n="nav_contact">Aloqa</a>
+            </nav>
+
+            <!-- Nav Actions (Contact Button & Language Switcher) -->
+            <div class="nav-actions">
+                <a href="#contact" class="btn-outline-sm" data-i18n="btn_contact_nav">Bog'lanish</a>
+                <div class="lang-switch">
+                    <button type="button" class="lang-btn" data-lang="en">EN</button>
+                    <span class="lang-divider">/</span>
+                    <button type="button" class="lang-btn active" data-lang="uz">UZ</button>
+                    <span class="lang-divider">/</span>
+                    <button type="button" class="lang-btn" data-lang="ru">RU</button>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menyu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#about" class="mobile-link" data-i18n="nav_about">Haqimda</a>
+            <a href="#experience" class="mobile-link" data-i18n="nav_exp">Tajriba</a>
+            <a href="#aidevix" class="mobile-link" data-i18n="nav_aidevix">Aidevix</a>
+            <a href="#achievements" class="mobile-link" data-i18n="nav_achievements">Yutuqlar</a>
+            <a href="#skills" class="mobile-link" data-i18n="nav_skills">Ko'nikmalar</a>
+            <a href="#projects" class="mobile-link" data-i18n="nav_projects">Loyihalar</a>
+            <a href="#contact" class="mobile-link" data-i18n="nav_contact">Aloqa</a>
+            <div class="mobile-lang">
+                <button type="button" class="lang-btn" data-lang="en">EN</button>
+                <span>/</span>
+                <button type="button" class="lang-btn active" data-lang="uz">UZ</button>
+                <span>/</span>
+                <button type="button" class="lang-btn" data-lang="ru">RU</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section (Pixel-perfect replication of reference image) -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <!-- Left Column: Bio & Info -->
+                <div class="hero-content">
+                    <!-- Status Badge -->
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span class="status-text" data-i18n="hero_status">Hamkorlik va masofaviy ishlar uchun ochiqman</span>
+                    </div>
+
+                    <!-- Main Name -->
+                    <h1 class="hero-name">Nodir Rimbayev</h1>
+
+                    <!-- Role / Subtitle in monospaced purple code style -->
+                    <div class="hero-subtitle">
+                        <span data-i18n="hero_role">Frontend dasturchi · 15 yoshli web mutaxassisi</span>
+                    </div>
+
+                    <!-- Description -->
+                    <p class="hero-desc" data-i18n="hero_desc">
+                        Salom! Men Nodir Rimbayev, 15 yoshli iqtidorli Frontend dasturchiman. Men React, Next.js va TypeScript yordamida zamonaviy, qulay va interaktiv veb-saytlar hamda ilovalar yarataman — yangi texnologiyalar va AI integratsiyalarini faol o'rganib amaliyotda qo'llayman.
+                    </p>
+
+                    <!-- Location -->
+                    <div class="hero-location">
+                        <svg class="icon-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span data-i18n="hero_location">Toshkent, O'zbekiston</span>
+                    </div>
+
+                    <!-- Action Buttons matching reference image -->
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <span data-i18n="btn_contact">Bog'lanish</span>
+                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#aidevix" class="btn btn-dark">
+                            <span data-i18n="btn_aidevix">Aidevix'ga o'tish</span>
+                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </a>
+                        <a href="./images/profile.png" download="Nodir_Rimbayev_CV.png" class="btn btn-dark" id="cvDownloadBtn">
+                            <span data-i18n="btn_cv">CV yuklab olish</span>
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Social Media Links (Icons matching reference image) -->
+                    <div class="hero-socials">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-box" aria-label="LinkedIn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-box" aria-label="GitHub" title="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-box" aria-label="Instagram" title="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-box" aria-label="Facebook" title="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95C18.05 21.45 22 17.19 22 12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="social-box" aria-label="Telegram" title="Telegram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .26z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Terminal Window Frame with Photo -->
+                <div class="hero-image-wrapper">
+                    <div class="terminal-card">
+                        <!-- Window Titlebar with colored dots and filename -->
+                        <div class="terminal-bar">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="terminal-filename">nodir.jpg</span>
+                        </div>
+                        <!-- Window Image Body with the cropped profile image -->
+                        <div class="terminal-image-container">
+                            <img src="./images/profile.png" alt="Nodir Rimbayev — Frontend Dasturchi" class="profile-photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 01: About Me (Shown at bottom of reference image) -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-tag">
+                    <span class="tag-num">01</span>
+                    <span class="tag-slash">//</span>
+                    <span class="tag-title" data-i18n="sec_about">MEN HAQIMDA</span>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text-col">
+                        <h2 class="section-heading" data-i18n="about_heading">Mening maqsadim — zamonaviy, tezkor va go'zal web ilovalar yaratish</h2>
+                        <p class="about-p" data-i18n="about_p1">
+                            Salom! Men Nodir Rimbayev, 15 yoshdaman va zamonaviy web texnologiyalariga chuqur qiziqadigan <strong>Frontend Dasturchi</strong>man. Yoshimga qaramay, murakkab g'oyalarni toza, samarali va kengaytiriluvchi kodga aylantirishni o'rganib amaliyotda qo'llab kelmoqdaman.
+                        </p>
+                        <p class="about-p" data-i18n="about_p2">
+                            Har bir loyihada foydalanuvchi tajribasi (UX), chiroyli dizayn, tez yuklanish va qulaylik mezonlariga alohida e'tibor qarataman. React, Next.js, TypeScript va AI texnologiyalarini o'rganishda har kuni o'z ustimda ishlayman.
+                        </p>
+
+                        <!-- Key facts -->
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-check">✓</span>
+                                <span data-i18n="fact_1">Toza, semantik va modulli arxitektura</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-check">✓</span>
+                                <span data-i18n="fact_2">Mobil va barcha ekranlarga to'liq moslashuvchanlik (Responsive)</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-check">✓</span>
+                                <span data-i18n="fact_3">REST API, Zamonaviy UI komponentlar va AI integratsiyasi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Statistics Card -->
+                    <div class="about-stats-col">
+                        <div class="stat-card">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label" data-i18n="stat_age">Yoshimda (Yosh Iqtidor)</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">2+</div>
+                            <div class="stat-label" data-i18n="stat_exp">Yillik Dasturlash Tajribasi</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label" data-i18n="stat_projects">Muvaffaqiyatli Loyihalar</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label" data-i18n="stat_happy">Ishtiyoq & Intilish</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 02: Experience -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <div class="section-tag">
+                    <span class="tag-num">02</span>
+                    <span class="tag-slash">//</span>
+                    <span class="tag-title" data-i18n="sec_exp">ISh TAJRIBASI</span>
+                </div>
+
+                <h2 class="section-heading" data-i18n="exp_heading">Faoliyatim & Tajribam</h2>
+
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2024 — Hozirgacha</div>
+                        <div class="timeline-body">
+                            <h3 class="timeline-role">Lead Frontend Dasturchi & Asoschi</h3>
+                            <h4 class="timeline-company">Aidevix Platformasi</h4>
+                            <p class="timeline-desc" data-i18n="exp_desc1">
+                                O'zbekistonda dasturlashni tez va samarali o'rganish uchun AI-first ta'lim platformasini ishlab chiqish. React, Next.js va Tailwind CSS yordamida interaktiv interfeyslar, sinov tizimlari va avtomatlashgan baholash modullarini qurish.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2022 — 2024</div>
+                        <div class="timeline-body">
+                            <h3 class="timeline-role">Senior Frontend Engineer</h3>
+                            <h4 class="timeline-company">FinTech & E-commerce Loyihalari</h4>
+                            <p class="timeline-desc" data-i18n="exp_desc2">
+                                Yuqori yuklamali veb-ilovalar ishlab chiqish, to'lov tizimlari integratsiyasi, komponentlar kutubxonasini optimallashtirish va sahifalar yuklanish tezligini 40% ga oshirish.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2021 — 2022</div>
+                        <div class="timeline-body">
+                            <h3 class="timeline-role">Frontend Web Developer</h3>
+                            <h4 class="timeline-company">Digital Agency</h4>
+                            <p class="timeline-desc" data-i18n="exp_desc3">
+                                Figma maketlari asosida pixel-perfect, adaptiv va animatsiyalarga boy korporativ saytlar, landing pagelar va CRM tizimlar yaratish.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 03: Aidevix Platform -->
+        <section id="aidevix" class="section aidevix-section">
+            <div class="container">
+                <div class="section-tag">
+                    <span class="tag-num">03</span>
+                    <span class="tag-slash">//</span>
+                    <span class="tag-title" data-i18n="sec_aidevix">AIDEVIX PLATFORMASI</span>
+                </div>
+
+                <div class="aidevix-banner">
+                    <div class="aidevix-info">
+                        <span class="badge-accent">AI-Powered Education</span>
+                        <h2 class="section-heading" data-i18n="aidevix_heading">Aidevix — Dasturlash ta'limida yangi avlod</h2>
+                        <p class="aidevix-p" data-i18n="aidevix_desc">
+                            Sun'iy intellekt integratsiyalashgan platforma orqali talabalar real kod yozishni, xatolarni tahlil qilishni va professional darajaga tez yetishishni o'rganadilar.
+                        </p>
+                        <div class="aidevix-features">
+                            <div class="af-item">
+                                <span class="af-icon">⚡</span>
+                                <div>
+                                    <strong>AI Repetitor</strong>
+                                    <p>Real-vaqtda kodni tekshirish va yo'l-yo'riq ko'rsatish</p>
+                                </div>
+                            </div>
+                            <div class="af-item">
+                                <span class="af-icon">💻</span>
+                                <div>
+                                    <strong>Interaktiv Sandbox</strong>
+                                    <p>Brauzerda to'liq React, JS va CSS kodlarini yurgizish</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aidevix-code-preview">
+                        <div class="code-box">
+                            <div class="code-header">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                                <span class="code-title">aidevix-core.ts</span>
+                            </div>
+                            <pre class="code-content"><code><span class="code-kw">import</span> { AIStream } <span class="code-kw">from</span> <span class="code-str">'@aidevix/ai'</span>;
+
+<span class="code-kw">export async function</span> <span class="code-fn">teachNextGenDevs</span>() {
+  <span class="code-kw">const</span> developer = {
+    name: <span class="code-str">'Nodir Rimbayev'</span>,
+    age: <span class="code-kw">15</span>,
+    role: <span class="code-str">'Frontend Dasturchi'</span>,
+    stack: [<span class="code-str">'React'</span>, <span class="code-str">'Next.js'</span>, <span class="code-str">'TypeScript'</span>],
+    passion: <span class="code-str">'AI-First Software'</span>,
+    status: <span class="code-str">'Ready to build!'</span>
+  };
+
+  <span class="code-kw">return await</span> AIStream.init(developer);
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 04: Achievements -->
+        <section id="achievements" class="section achievements-section">
+            <div class="container">
+                <div class="section-tag">
+                    <span class="tag-num">04</span>
+                    <span class="tag-slash">//</span>
+                    <span class="tag-title" data-i18n="sec_achievements">YUTUQLAR VA SERTIFIKATLAR</span>
+                </div>
+
+                <h2 class="section-heading" data-i18n="achieve_heading">Yutuqlarim & Ko'rsatkichlar</h2>
+
+                <div class="achieve-grid">
+                    <div class="achieve-card">
+                        <div class="achieve-icon">🏆</div>
+                        <h3 class="achieve-title">AI Hackathon G'olibi</h3>
+                        <p class="achieve-desc">AI asosidagi web-ta'lim platformasi loyihasi bilan respublika miqyosidagi tanlovda g'oliblik.</p>
+                    </div>
+                    <div class="achieve-card">
+                        <div class="achieve-icon">⭐</div>
+                        <h3 class="achieve-title">Top-Rated Frontend Muhandis</h3>
+                        <p class="achieve-desc">Xalqaro platformalarda 20 dan ortiq mijozlarga yuqori sifatli veb-saytlar va ilovalar yetkazib berish.</p>
+                    </div>
+                    <div class="achieve-card">
+                        <div class="achieve-icon">📜</div>
+                        <h3 class="achieve-title">Sertifikatlangan Mutaxassis</h3>
+                        <p class="achieve-desc">Advanced React, TypeScript Architecture va Modern Web Performance sertifikatlari egasi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 05: Skills -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-tag">
+                    <span class="tag-num">05</span>
+                    <span class="tag-slash">//</span>
+                    <span class="tag-title" data-i18n="sec_skills">KO'NIKMALAR & TEXNOLOGIYALAR</span>
+                </div>
+
+                <h2 class="section-heading" data-i18n="skills_heading">Foydalanadigan Texnologiyalarim</h2>
+
+                <div class="skills-grid">
+                    <!-- Frontend Group -->
+                    <div class="skill-category">
+                        <div class="cat-header">
+                            <span class="cat-icon">⚡</span>
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="tags-list">
+                            <span class="tech-tag highlight">React.js</span>
+                            <span class="tech-tag highlight">Next.js</span>
+                            <span class="tech-tag highlight">TypeScript</span>
+                            <span class="tech-tag">JavaScript (ES6+)</span>
+                            <span class="tech-tag">HTML5 / Semantics</span>
+                            <span class="tech-tag">CSS3 / SCSS</span>
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Redux Toolkit / Zustand</span>
+                        </div>
+                    </div>
+
+                    <!-- Backend & API Group -->
+                    <div class="skill-category">
+                        <div class="cat-header">
+                            <span class="cat-icon">🛠</span>
+                            <h3>Backend & Integratsiya</h3>
+                        </div>
+                        <div class="tags-list">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">RESTful APIs</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">PostgreSQL / MongoDB</span>
+                            <span class="tech-tag">Firebase / Supabase</span>
+                            <span class="tech-tag">JWT / Auth</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Workflow Group -->
+                    <div class="skill-category">
+                        <div class="cat-header">
+                            <span class="cat-icon">🚀</span>
+                            <h3>Asboblar & AI</h3>
+                        </div>
+                        <div class="tags-list">
+                            <span class="tech-tag">Git / GitHub</span>
+                            <span class="tech-tag">Vite / Webpack</span>
+                            <span class="tech-tag">Figma to Code</span>
+                            <span class="tech-tag">AI API Integrations</span>
+                            <span class="tech-tag">Docker Basics</span>
+                            <span class="tech-tag">Postman</span>
+                            <span class="tech-tag">Vercel / Netlify</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 06: Projects -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-tag">
+                    <span class="tag-num">06</span>
+                    <span class="tag-slash">//</span>
+                    <span class="tag-title" data-i18n="sec_projects">SARALANGAN LOYIHALAR</span>
+                </div>
+
+                <h2 class="section-heading" data-i18n="projects_heading">Amalga Oshirilgan Ishlar</h2>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-type">AI & EdTech</span>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="Kod" class="p-link">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                                </a>
+                                <a href="#hero" class="p-link" title="Ko'rish">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Aidevix Platformasi</h3>
+                        <p class="project-desc" data-i18n="p1_desc">Dasturlashni o'rganuvchilar uchun sun'iy intellektga asoslangan zamonaviy interaktiv ta'lim muhiti.</p>
+                        <div class="project-techs">
+                            <span>Next.js</span>
+                            <span>TypeScript</span>
+                            <span>Tailwind</span>
+                            <span>OpenAI API</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-type">E-Commerce</span>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="Kod" class="p-link">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                                </a>
+                                <a href="#hero" class="p-link" title="Ko'rish">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">UltraStore Marketplace</h3>
+                        <p class="project-desc" data-i18n="p2_desc">Tezkor filterlash, savatcha holati, to'lov tizimlari va qulay boshqaruv paneliga ega zamonaviy internet-do'kon.</p>
+                        <div class="project-techs">
+                            <span>React</span>
+                            <span>Redux Toolkit</span>
+                            <span>REST API</span>
+                            <span>Stripe</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-type">SaaS Dashboard</span>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="Kod" class="p-link">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                                </a>
+                                <a href="#hero" class="p-link" title="Ko'rish">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Analytics & Task Hub</h3>
+                        <p class="project-desc" data-i18n="p3_desc">Real-vaqt statistikasi, grafiklar va vazifalar boshqaruvini birlashtirgan analitika paneli.</p>
+                        <div class="project-techs">
+                            <span>Vue 3</span>
+                            <span>Chart.js</span>
+                            <span>Node.js</span>
+                            <span>Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 07: Contact -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-tag">
+                    <span class="tag-num">07</span>
+                    <span class="tag-slash">//</span>
+                    <span class="tag-title" data-i18n="sec_contact">ALOQA VA HAMKORLIK</span>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h2 class="section-heading" data-i18n="contact_heading">Birgalikda ajoyib loyiha yarataylik!</h2>
+                        <p class="contact-desc" data-i18n="contact_sub">
+                            Yangi loyiha, frilans yoki hamkorlik takliflari bo'lsa, xabar qoldiring. Men har doim yangi va qiziqarli imkoniyatlarga ochiqman.
+                        </p>
+
+                        <div class="contact-details">
+                            <div class="c-detail-item">
+                                <span class="c-detail-icon">✉</span>
+                                <div>
+                                    <div class="c-detail-label">Email</div>
+                                    <a href="mailto:nodir.rimbayev@example.com" class="c-detail-val">nodir.rimbayev@example.com</a>
+                                </div>
+                            </div>
+                            <div class="c-detail-item">
+                                <span class="c-detail-icon">📍</span>
+                                <div>
+                                    <div class="c-detail-label" data-i18n="c_loc_label">Manzil</div>
+                                    <span class="c-detail-val" data-i18n="hero_location">Toshkent, O'zbekiston</span>
+                                </div>
+                            </div>
+                            <div class="c-detail-item">
+                                <span class="c-detail-icon">💬</span>
+                                <div>
+                                    <div class="c-detail-label">Telegram</div>
+                                    <a href="https://t.me/nodir_rimbayev" target="_blank" rel="noopener noreferrer" class="c-detail-val">@nodir_rimbayev</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-card">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name" data-i18n="f_name">Ismingiz</label>
+                                <input type="text" id="name" required placeholder="Masalan: Azizbek">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-i18n="f_email">Email manzilingiz</label>
+                                <input type="email" id="email" required placeholder="azizbek@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="message" data-i18n="f_message">Xabaringiz</label>
+                                <textarea id="message" rows="4" required placeholder="Loyiha haqida qisqacha ma'lumot..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span data-i18n="btn_send">Xabarni yuborish</span>
+                                <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </button>
+                        </form>
+                        <div id="formSuccess" class="form-success-msg" style="display: none;">
+                            ✓ <span data-i18n="f_success">Xabaringiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog'lanaman.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <span class="logo-prefix">~/</span>nodir_ · &copy; 2026. <span data-i18n="footer_rights">Barcha huquqlar himoyalangan.</span>
+            </div>
+            <div class="footer-right">
+                <a href="#hero" class="back-to-top" title="Tepaga qaytish">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./main.js"></script>
+</body>
+</html>
